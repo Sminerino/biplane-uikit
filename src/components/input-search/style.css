@@ -1,0 +1,35 @@
+@import './../../common/colors.css';
+@import './../../common/variables.css';
+
+.bui-input-search {
+  display: inline-block;
+  position: relative;
+  max-width: 370px;
+}
+
+.bui-input-search_disabled > input {
+  pointer-events: none;
+  background-color: var(--gray-shadow);
+}
+
+.bui-input-search>input {
+  font-family: var(--font-family);
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 7px 26px 7px 18px;
+  border: 1px solid var(--gray-border);
+  outline: none;
+  transition: var(--transition-border);
+}
+
+.bui-input-search>input:focus {
+  border-color: var(--green-primary);
+  color: var(--black-text);
+}
+
+.bui-input-search__icon {
+  position: absolute;
+  right: 17px;
+  bottom: 12px;
+  pointer-events: none;
+}

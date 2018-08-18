@@ -1,0 +1,12 @@
+:root {
+  --green-primary: #15ad56;
+  --green-light: #5cad7b;
+  --green-dark: #129c4d;
+  --green-transparent-dark: rgba(21, 173, 86, 0.2);
+  --green-transparent-light: #e7f6ee;
+  --gray-light: #e0e0e0;
+  --gray-border: #ccc;
+  --gray-dark: #999;
+  --black-text: #232825;
+  --gray-shadow: rgba(22, 41, 30, 0.1);
+}

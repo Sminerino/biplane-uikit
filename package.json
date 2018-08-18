@@ -1,0 +1,23 @@
+{
+  "name": "biplane-uikit",
+  "version": "0.1.7",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "files": [
+    "src-transpiled/",
+    "lib/"
+  ],
+  "main": "src-transpiled/index.js",
+  "scripts": {
+    "build": "babel src --copy-files --out-dir src-transpiled --plugins=babel-plugin-transform-es2015-modules-commonjs --presets=babel-preset-react,babel-preset-stage-0"
+  }
+}

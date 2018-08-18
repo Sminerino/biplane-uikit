@@ -1,0 +1,56 @@
+@import './../../common/colors.css';
+@import './../../common/variables.css';
+
+.bui-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: var(--font-family);
+  user-select: none;
+}
+
+.bui-checkbox_disabled > span {
+  border-color: var(--gray-border);
+}
+
+.bui-checkbox_disabled {
+  color: var(--gray-dark);
+}
+
+.bui-checkbox > input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.bui-checkbox__mark {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  border: 1px solid #000;
+}
+
+.bui-checkbox__mark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.bui-checkbox input:checked ~.bui-checkbox__mark::after {
+  display: block;
+}
+
+.bui-checkbox .bui-checkbox__mark::after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 6px;
+  border: solid var(--green-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 1;
+}

@@ -1,0 +1,64 @@
+@import "./../../common/colors.css";
+@import "./../../common/variables.css";
+
+.bui-tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.bui-tooltip__content {
+}
+
+.bui-tooltip > .bui-tooltip__content:hover ~ .bui-tooltip__label-container {
+  transform: scale(1);
+  transition: var(--transition-transform);
+}
+
+.bui-tooltip__label {
+  padding: 14px 17px;
+  background-color: #fff;
+  border: 1px solid var(--gray-border);
+  border-radius: var(--border-radius-medium);
+  word-break: keep-all;
+  white-space: pre;
+  overflow-wrap: break-spaces;
+  font-family: var(--font-family);
+}
+
+.bui-tooltip__triangle {
+  height: 0;
+  width: 0;
+  content: "";
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 11px solid var(--gray-border);
+  position: absolute;
+  top: 0;
+}
+
+.bui-tooltip__triangle::before {
+  height: 1px;
+  width: 0;
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  top: 0;
+  left: -6px;
+}
+
+.bui-tooltip__label-container {
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 25px);
+  padding-top: 10px;
+  transform: scale(0);
+  transition: var(--transition-transform);
+  z-index: 2;
+}
+
+.bui-tooltip__label-container:hover {
+  transform: scale(1);
+}

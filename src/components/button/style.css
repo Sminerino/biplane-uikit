@@ -1,0 +1,54 @@
+@import './../../common/colors.css';
+@import './../../common/variables.css';
+
+.bui-button {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: var(--border-radius-small);
+  font-family: var(--font-family);
+  font-size: 20px;
+  transition: var(--transition-background);
+  cursor: pointer;
+  user-select: none;
+}
+
+.bui-button_disabled {
+  pointer-events: none;
+}
+
+.bui-button_disabled.bui-button_primary {
+  background-color: var(--gray-border);
+}
+
+.bui-button_disabled.bui-button_secondary {
+  color: var(--gray-border);
+  border-color: var(--gray-border);
+}
+
+.bui-button_primary {
+  background-color: var(--green-primary);
+  color: #fff;
+}
+
+.bui-button_primary:hover {
+  background-color: var(--green-light);
+}
+
+.bui-button_primary:active {
+  background-color: var(--green-dark);
+}
+
+.bui-button_secondary {
+  padding: 6px 19px;
+  border: solid 1px var(--green-primary);
+  color: var(--green-primary);
+}
+
+.bui-button_secondary:hover {
+  background-color: var(--green-transparent-light);
+}
+
+.bui-button_secondary:active {
+  background-color: var(--green-transparent-dark);
+  color: var(--green-dark);
+}
