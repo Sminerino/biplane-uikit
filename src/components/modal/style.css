@@ -11,6 +11,18 @@
   top: 0;
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+  animation: modalBackgroundOpening 300ms linear;
+  transition: 300ms opacity linear;
+}
+
+.bui-modal__container_closing {
+  opacity: 0;
+}
+
+.bui-modal__container_closing>.bui-modal {
+  transform: scale(0);
+  transition: 300ms transform linear;
 }
 
 .bui-modal {
@@ -21,6 +33,9 @@
   border-radius: var(--border-radius-medium);
   box-shadow: var(--shadow-medium);
   font-family: var(--font-family);
+  transform: scale(1);
+  animation: modalOpening 300ms linear;
+  transition: 300ms transform linear;
 }
 
 .bui-modal__close {
@@ -43,4 +58,14 @@
 
 .bui-modal_size_medium {
   width: 500px;
+}
+
+@keyframes modalBackgroundOpening {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes modalOpening {
+  from {opacity: 0; transform: scale(0);}
+  to {opacity: 1; transform: scale(1);}
 }
