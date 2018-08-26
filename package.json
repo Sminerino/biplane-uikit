@@ -1,6 +1,6 @@
 {
   "name": "biplane-uikit",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-react": "^6.24.1",
