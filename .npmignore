@@ -4,3 +4,6 @@ example.jsx
 index.html
 root.js
 webpack.config.js
+src
+yarn-error.log
+yarn.lock

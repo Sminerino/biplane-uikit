@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js dev
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add babel^7.0.0
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
@@ -14,23 +14,27 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/smine/git/biplane-uikit-package/package.json: Unexpected token } in JSON at position 1465
-      at JSON.parse (<anonymous>)
-      at /usr/share/yarn/lib/cli.js:1130:59
-      at Generator.next (<anonymous>)
-      at step (/usr/share/yarn/lib/cli.js:92:30)
-      at /usr/share/yarn/lib/cli.js:103:13
-      at <anonymous>
+  Error: https://registry.yarnpkg.com/babel%5E7.0.0: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:64202:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:137468:22)
+      at Request.emit (events.js:159:13)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:138440:10)
+      at Request.emit (events.js:159:13)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:138362:12)
+      at Object.onceWrapper (events.js:254:19)
+      at IncomingMessage.emit (events.js:164:20)
+      at endReadableNT (_stream_readable.js:1062:12)
+      at process._tickCallback (internal/process/next_tick.js:152:19)
 
 npm manifest: 
   {
     "name": "biplane-uikit",
     "version": "0.2.0",
     "description": "",
-    "private": true,
     "license": "UNLICENSED",
     "scripts": {
-      "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline"
+      "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline",
+      "pub": "cross-env NODE_ENV=production babel src --copy-files --out-dir dist"
     },
     "devDependencies": {
       "@babel/core": "^7.0.0",
@@ -65,7 +69,7 @@ npm manifest:
     "dependencies": {
       "class-names": "^1.0.0",
       "prop-types": "^15.6.2",
-      "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0",
+      "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0"
     },
     "files": [
       "src/",
