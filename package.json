@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline",
-    "pub": "cross-env NODE_ENV=production babel src --copy-files --out-dir dist npm version patch npm publish"
+    "build": "cross-env NODE_ENV=production babel src --copy-files --out-dir dist"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
