@@ -1,2 +1,6 @@
-src
 node_modules
+example.jsx
+.babelrc
+index.html
+root.js
+webpack.config.js

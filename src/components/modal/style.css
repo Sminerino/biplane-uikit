@@ -28,6 +28,7 @@
 .bui-modal {
   position: relative;
   padding: 38px 45px;
+  box-sizing: border-box;
   background-color: #fff;
   border: 1px solid var(--gray-light);
   border-radius: var(--border-radius-medium);

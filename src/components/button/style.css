@@ -6,6 +6,7 @@
   padding: 7px 20px;
   border-radius: var(--border-radius-small);
   font-family: var(--font-family);
+  text-align: center;
   white-space: nowrap;
   font-size: 20px;
   transition: var(--transition-background);

@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "@babel/plugin-syntax-class-properties",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-block-scoping",
+    "@babel/plugin-syntax-jsx",
+    "@babel/plugin-transform-react-jsx",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-object-rest-spread",
+    "react-hot-loader/babel"
+  ],
+  "presets": [
+    "@babel/preset-react",
+    "@babel/preset-env"
+  ]
+}

@@ -54,10 +54,19 @@
   z-index: 2;
   position: absolute;
   margin-top: 2px;
+  max-height: 300px;
+  min-width: 100px;
   background-color: #fff;
   border: 1px solid var(--gray-border);
   border-radius: var(--border-radius-medium);
-  transition: all 500ms linear;
+  overflow: auto;
+  transform: scaleY(1);
+  transition: background-color 500ms linear, max-height 150ms linear;
+  animation: dropdown 150ms ease-in;
+}
+
+.bui-select__options.bui-select__options_closing {
+  max-height: 0;
 }
 
 .bui-select__option {
@@ -78,4 +87,9 @@
 .bui-select__options-transition-enter {
   opacity: 0.01;
   transform: scale(0.9) translateY(50%);
+}
+
+@keyframes dropdown {
+  from {max-height: 0}
+  to {max-height: 300px}
 }

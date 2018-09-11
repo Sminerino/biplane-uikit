@@ -8,8 +8,13 @@ class Select extends React.Component {
     dropdownOpened: false
   };
 
+  dropdownRef = React.createRef();
+
   openDropdown = () => this.setState({ dropdownOpened: true });
-  closeDropdown = () => this.setState({ dropdownOpened: false });
+  closeDropdown = () => {
+    this.dropdownRef.classList.add('bui-select__options_closing');
+    setTimeout(() => this.setState({ dropdownOpened: false }), 150);
+  }
 
   handleSelect = e => {
     if (e.target.attributes.value !== this.props.value)
@@ -43,7 +48,7 @@ class Select extends React.Component {
             : placeholder}
         </div>
         {dropdownOpened && (
-          <div className="bui-select__options">
+          <div className="bui-select__options" ref={div => this.dropdownRef = div}>
             {options.map(({ label, value }) => (
               <option
                 className={classNames(
