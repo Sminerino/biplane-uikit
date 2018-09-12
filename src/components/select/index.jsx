@@ -44,7 +44,7 @@ class Select extends React.Component {
         tabIndex={0}
       >
         <div className="bui-select__button">
-          {selectValue
+          {selectValue !== undefined
             ? options.find(o => o.value === selectValue).label
             : placeholder}
         </div>
@@ -78,7 +78,7 @@ Select.propTypes = {
     })
   ),
   disabled: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   placeholder: PropTypes.string
 };
