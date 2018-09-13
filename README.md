@@ -1,5 +1,3 @@
-made with create-react-app
-
 ###### npm package: biplane-uikit
 
 to build package:
@@ -7,7 +5,7 @@ to build package:
 
 then `npm run build` or `yarn build`
 
-examples are not available yet
+to look at examples, run `npm run example` or `yarn example` after installing
 
 components:
 1. Button
