@@ -22,7 +22,6 @@
   word-break: keep-all;
   white-space: pre;
   overflow-wrap: break-spaces;
-  font-family: var(--font-family);
 }
 
 .bui-tooltip__triangle {

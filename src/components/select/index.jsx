@@ -86,8 +86,6 @@ Select.propTypes = {
 Select.defaultProps = {
   options: [],
   disabled: false,
-  input: { value: "", onChange: () => void 0 },
-  value: "",
   onChange: () => void 0,
   placeholder: "Select item"
 };

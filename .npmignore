@@ -1,8 +1,8 @@
 node_modules
-example.jsx
+demo/example.jsx
 .babelrc
-index.html
-root.js
+demo/index.html
+demo/root.js
 webpack.config.js
 src
 yarn-error.log

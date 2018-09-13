@@ -3,14 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
-  entry: './root.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/'
-  },
+  entry: './demo/root.js',
   plugins: [new HtmlWebpackPlugin({
-    template: './index.html'
+    template: './demo/index.html'
   })],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -35,14 +30,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
         test: /\.(svg|png|jpg|woff|woff2)$/,
         use: ['file-loader']
       },
@@ -55,5 +42,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : false
+  devtool: 'source-map'
 }

@@ -2,9 +2,12 @@
 @import "./../../common/variables.css";
 
 .bui-select {
+  display: inline-flex;
+  flex-grow: 0;
+  flex-shrink: 1;
   position: relative;
   outline: none;
-  font-family: var(--font-family);
+  max-width: 300px;
 }
 
 .bui-select_disabled {
@@ -19,11 +22,13 @@
 .bui-select__button {
   position: relative;
   display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   padding: 6px 30px 6px 14px;
   flex-grow: 0;
   border: solid 1px var(--green-primary);
   border-radius: var(--border-radius-small);
-  font-family: var(--font-family);
   font-size: 20px;
   cursor: pointer;
   user-select: none;
@@ -53,13 +58,16 @@
 .bui-select__options {
   z-index: 2;
   position: absolute;
+  top: 100%;
   margin-top: 2px;
   max-height: 300px;
   min-width: 100px;
+  max-width: 300px;
   background-color: #fff;
   border: 1px solid var(--gray-border);
   border-radius: var(--border-radius-medium);
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   transform: scaleY(1);
   transition: background-color 500ms linear, max-height 150ms linear;
   animation: dropdown 150ms ease-in;
@@ -70,6 +78,8 @@
 }
 
 .bui-select__option {
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 5px 13px;
   user-select: none;
   cursor: pointer;
@@ -82,11 +92,6 @@
 .bui-select__option_selected {
   color: var(--green-primary);
   font-weight: bold;
-}
-
-.bui-select__options-transition-enter {
-  opacity: 0.01;
-  transform: scale(0.9) translateY(50%);
 }
 
 @keyframes dropdown {

@@ -1,15 +1,8 @@
 @import "./colors.css";
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("fonts/open-sans-regular.woff") format("woff"),
-    url("fonts/open-sans-regular.woff2") format("woff2");
-}
-
 :root {
   --border-radius-small: 3px;
   --border-radius-medium: 5px;
-  --font-family: "Open Sans", sans-serif;
   --transition-background: 150ms background-color linear;
   --transition-color: 150ms color linear;
   --transition-border: 150ms border-color linear;
