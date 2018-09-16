@@ -1,0 +1,52 @@
+@import "../../common/colors.css";
+@import "../../common/variables.css";
+
+.bui-editable-box {
+  display: flex;
+  align-self: stretch;
+  max-width: 580px;
+  min-height: 38px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: var(--transition-border);
+}
+
+.bui-editable-box:hover:not(.bui-editable-box_readonly) {
+  border-color: var(--gray-border);
+}
+
+.bui-editable-box_editing,
+.bui-editable-box_editing.bui-editable-box:hover {
+  border-color: var(--green-primary);
+}
+
+.bui-editable-box:hover > .bui-editable-box__edit-button,
+.bui-editable-box_editing > .bui-editable-box__edit-button {
+  opacity: 1;
+}
+
+.bui-editable-box__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.bui-editable-box__edit-button {
+  padding: 6px;
+  opacity: 0;
+  background-color: var(--gray-shadow);
+  border-left: 1px solid var(--gray-border);
+  cursor: pointer;
+  transition: var(--transition-background), opacity 150ms linear;
+  user-select: none;
+}
+
+.bui-editable-box__edit-button:hover {
+  background-color: var(--gray-light);
+}
+
+.bui-editable-box__stop-edit {
+  color: var(--gray-dark);
+  font-size: 25px;
+  line-height: 15px;
+}

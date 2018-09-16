@@ -75,6 +75,7 @@
 
 .bui-select__options.bui-select__options_closing {
   max-height: 0;
+  overflow-y: hidden;
 }
 
 .bui-select__option {
@@ -95,6 +96,6 @@
 }
 
 @keyframes dropdown {
-  from {max-height: 0}
-  to {max-height: 300px}
+  from { max-height: 0; overflow-y: hidden; }
+  to {max-height: 300px; overflow-y: auto; }
 }

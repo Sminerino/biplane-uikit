@@ -5,3 +5,5 @@ export {default as Modal} from './components/modal';
 export {default as numberFormatter} from './components/number-formatter';
 export {default as Select} from './components/select';
 export {default as Tooltip} from './components/tooltip';
+export {default as EditableTextarea} from './components/editable-textarea';
+export {default as EditableTagbox} from './components/editable-tagbox';

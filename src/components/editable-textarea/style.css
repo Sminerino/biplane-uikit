@@ -1,0 +1,10 @@
+.bui-editable-textarea__input {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  resize: none;
+  border: none;
+  padding: 5px;
+  font-size: 17px;
+  outline: none;
+}

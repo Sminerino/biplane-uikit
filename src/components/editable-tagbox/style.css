@@ -1,0 +1,51 @@
+@import '../../common/colors.css';
+@import '../../common/variables.css';
+
+.bui-editable-tagbox__tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.bui-editable-tagbox__tag {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  color: var(--green-primary);
+  font-weight: bold;
+  padding: 3px 10px;
+  font-size: 15px;
+  border-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background-color: var(--green-transparent-dark);
+  margin: 5px;
+  transition: width 150ms linear;
+}
+
+.bui-editable-tagbox__tag-delete {
+  margin-left: 2px;
+  padding: 0 2px 0 4px;
+  font-size: 12px;
+  line-height: 10px;
+  color: var(--green-primary);
+  cursor: pointer;
+  transition: var(--transition-color);
+}
+
+.bui-editable-tagbox__tag-delete:hover {
+  color: var(--green-dark);
+}
+
+.bui-editable-tagbox__input {
+  width: 100px;
+  display: flex;
+  flex-shrink: 1;
+  padding: 3px 10px;
+  margin: 5px;
+  border: none;
+  border-bottom: 1px solid var(--gray-border);
+  font-size: 18px;
+}

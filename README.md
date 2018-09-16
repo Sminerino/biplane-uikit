@@ -71,11 +71,29 @@ Props:
 * children: wrapped content, any valid react node
 * label: content of the tooltip window, any valid react node
 
+###### EditableTextarea
+Textarea with editable - readonly toggler
+Feel free to override "min-height" on the `bui-editable-box` element - textarea won't stretch itself automatically with content growth
+
+Props:
+* readOnly: boolean - is field editable, also disables hover
+* value: string
+* onChange: function(value: string) - event triggering on textarea change
+
+###### EditableTagbox
+Editable list of tags that user can add to / delete from
+
+Props:
+* readOnly: boolean - is field editable, also disables hover
+* tags: array of string - tag list, every item must be unique
+* onChange: function(tags: arrayOf(string)) - event triggering on user creating / deleting a tag
+* newTagPlaceholder: string - placeholder for new tag input
+* maxCount: number - max number of tags user can create, should be >= than `tags` length
 
 #### Importing
 ###### ES6:
 
-import {Button} from 'biplane-uikit/lib';
+import {Button} from 'biplane-uikit';
 
 ...
 
