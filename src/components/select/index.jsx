@@ -3,9 +3,25 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import style from "./style.css";
 
+const reduceOptions = options =>
+  options.reduce((acc, option) => {
+    acc[option.value] = option;
+    return acc;
+  }, {});
+
 class Select extends React.Component {
   state = {
     dropdownOpened: false
+  };
+
+  memoizeOptionsMap = options => {
+    if (this.opt === options) {
+      return this.optionsMap;
+    }
+
+    this.opt = options;
+    this.optionsMap = reduceOptions(options);
+    return this.optionsMap;
   };
 
   dropdownRef = React.createRef();
@@ -18,13 +34,14 @@ class Select extends React.Component {
   };
 
   handleSelect = e => {
-    if (e.target.attributes.value !== this.props.value)
+    if (e.target.attributes.value.nodeValue !== this.props.value)
       this.props.onChange(e.target.attributes.value.nodeValue);
   };
 
   render() {
     const { options, disabled, value: selectValue, placeholder } = this.props;
     const dropdownOpened = this.state.dropdownOpened;
+    const optionsMap = this.memoizeOptionsMap(options);
 
     return (
       <div
@@ -44,8 +61,8 @@ class Select extends React.Component {
         tabIndex={0}
       >
         <div className="bui-select__button">
-          {selectValue !== undefined
-            ? options.find(o => o.value === selectValue).label
+          {selectValue !== undefined && optionsMap[selectValue]
+            ? optionsMap[selectValue].label
             : placeholder}
         </div>
         {dropdownOpened && (
